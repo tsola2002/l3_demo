@@ -34,7 +34,17 @@
 
 Route::get('/', function()
 {
-	return View::make('home.index');
+    //passing data to the view using the with method
+   // $greeting = "boss sholly";
+	//return View::make('home.index')->with('greeting', $greeting);
+
+    //codeigniter way of passing variables
+    $data = array(
+        'greeting' => 'hello',
+        'thing' => 'world'
+    );
+
+    return View::make('home.index', $data);
 });
 
 //route pointing to about page
