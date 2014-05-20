@@ -53,6 +53,13 @@ Route::get('about', function()
     return View::make('home.about');
 });
 
+Route::get('/', function()
+{
+    return View::make('home.index', array(
+        'items' => array('Item1','Item2','Item3','Item4')
+    ));
+});
+
 
 /*
 |--------------------------------------------------------------------------

@@ -10,6 +10,10 @@
 <body>
 	<!--Hello --><?php /*echo $greeting; */?>
 
-    <?php echo $greeting. '' .$thing; ?>
+    <?php /*echo $greeting. '' .$thing; */?>
+
+    @foreach($items as $item)
+        The item is {{ $item }}
+    @endforeach
 </body>
 </html>
